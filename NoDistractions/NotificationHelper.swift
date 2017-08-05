@@ -12,11 +12,29 @@ class NotificationHelper {
     var timerNotification = Timer()
     var timerToggle = Timer()
     
-    @objc func toggleDNDMode() {
+    // Detects if the OS has enable DND mode
+    func isDNDEnabled() -> Bool {
+        let theDefaults = UserDefaults(suiteName: "com.apple.notificationcenterui")
+        return theDefaults?.bool(forKey: "doNotDisturb") ?? false
+    }
+    
+    func toggleDNDMode() {
         let task = Process()
         task.launchPath =  "/usr/bin/osascript"
         task.arguments = ["/Users/Angel/dnd.applescript"]
         task.launch()
+    }
+    
+    @objc func startPomodoro() {
+        if (!isDNDEnabled()){
+            toggleDNDMode()
+        }
+    }
+    
+    @objc func finishPomodoro() {
+        if(isDNDEnabled()){
+            toggleDNDMode()
+        }
     }
     
     @objc func showNotification() {
@@ -29,8 +47,9 @@ class NotificationHelper {
     }
     
     func scheduleTask() {
-        toggleDNDMode()
-        self.timerToggle = Timer.scheduledTimer(timeInterval:   1485.0, target: self, selector: #selector(NotificationHelper.toggleDNDMode), userInfo: nil, repeats: false)
+        startPomodoro()
+        
+        self.timerToggle = Timer.scheduledTimer(timeInterval:   1485.0, target: self, selector: #selector(NotificationHelper.finishPomodoro), userInfo: nil, repeats: false)
         
         self.timerNotification = Timer.scheduledTimer(timeInterval: 1500.0, target: self, selector: #selector(NotificationHelper.showNotification), userInfo: nil, repeats: false)
     }
