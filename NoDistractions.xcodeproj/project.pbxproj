@@ -13,6 +13,8 @@
 		0B3E1BD41F34F57600BF0418 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B3E1BD21F34F57600BF0418 /* Main.storyboard */; };
 		0B3E1BDF1F34F57600BF0418 /* NoDistractionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3E1BDE1F34F57600BF0418 /* NoDistractionsTests.swift */; };
 		0B3E1BEA1F34F8C400BF0418 /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3E1BE91F34F8C400BF0418 /* NotificationHelper.swift */; };
+		0B44F8601F350E9E00318D8C /* dnd.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 0B44F85F1F350E9E00318D8C /* dnd.applescript */; };
+		0B44F8611F350E9E00318D8C /* dnd.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 0B44F85F1F350E9E00318D8C /* dnd.applescript */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,7 @@
 		0B3E1BDE1F34F57600BF0418 /* NoDistractionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDistractionsTests.swift; sourceTree = "<group>"; };
 		0B3E1BE01F34F57600BF0418 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B3E1BE91F34F8C400BF0418 /* NotificationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
+		0B44F85F1F350E9E00318D8C /* dnd.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = dnd.applescript; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,7 @@
 				0B3E1BD21F34F57600BF0418 /* Main.storyboard */,
 				0B3E1BD51F34F57600BF0418 /* Info.plist */,
 				0B3E1BE91F34F8C400BF0418 /* NotificationHelper.swift */,
+				0B44F85F1F350E9E00318D8C /* dnd.applescript */,
 			);
 			path = NoDistractions;
 			sourceTree = "<group>";
@@ -202,6 +206,7 @@
 			files = (
 				0B3E1BEA1F34F8C400BF0418 /* NotificationHelper.swift in Sources */,
 				0B3E1BCF1F34F57600BF0418 /* ViewController.swift in Sources */,
+				0B44F8601F350E9E00318D8C /* dnd.applescript in Sources */,
 				0B3E1BCD1F34F57600BF0418 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B44F8611F350E9E00318D8C /* dnd.applescript in Sources */,
 				0B3E1BDF1F34F57600BF0418 /* NoDistractionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +417,7 @@
 				0B3E1BE51F34F57600BF0418 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0B3E1BE61F34F57600BF0418 /* Build configuration list for PBXNativeTarget "NoDistractionsTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +426,7 @@
 				0B3E1BE81F34F57600BF0418 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
