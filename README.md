@@ -1,2 +1,2 @@
 # NoDistractions
-Initial project that allow you to be focused used Pomodoro techique.
+Initial project that allow you to be focused using Pomodoro techique.
