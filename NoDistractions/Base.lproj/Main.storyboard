@@ -710,6 +710,7 @@
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="actionButton" destination="EQZ-PT-JJ8" id="rjh-ec-adn"/>
                         <outlet property="timeLabel" destination="sjC-Vk-gwt" id="6ug-Ia-oR6"/>
                     </connections>
                 </viewController>

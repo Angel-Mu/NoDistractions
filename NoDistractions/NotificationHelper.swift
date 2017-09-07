@@ -46,6 +46,12 @@ class NotificationHelper {
         NSUserNotificationCenter.default.deliver(notification)
     }
     
+    func stopCurrentPomodoro() {
+        self.timerNotification.invalidate()
+        self.timerToggle.invalidate()
+        finishPomodoro()
+    }
+    
     func scheduleTask() {
         startPomodoro()
         

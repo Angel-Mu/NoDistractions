@@ -10,7 +10,7 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
+    let notifier = NotificationHelper()
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -19,8 +19,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
+        notifier.stopCurrentPomodoro()
     }
-
-
+    
 }
 

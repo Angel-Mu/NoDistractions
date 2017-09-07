@@ -15,8 +15,10 @@ class ViewController: NSViewController {
     var seconds = 0
     var timer = Timer()
     var isTimerRunning = false
+    var isPomodoroActive = false
     
     @IBOutlet weak var timeLabel: NSTextField!
+    @IBOutlet weak var actionButton: NSButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,10 +64,19 @@ class ViewController: NSViewController {
     }
     
     @IBAction func startPomodoro(_ sender: NSButton) {
-        //        25 minutes since not editable by now
-        seconds = 1500
-        notifier.scheduleTask()
-        showEndTime()
+        if (!self.isPomodoroActive) {
+            //        25 minutes since not editable by now
+            seconds = 1500
+            notifier.scheduleTask()
+            self.isPomodoroActive = true
+            self.actionButton.title = "Stop pomodoro"
+            showEndTime()
+        } else {
+            notifier.stopCurrentPomodoro()
+            self.isPomodoroActive = false
+            self.timeLabel.stringValue = ""
+            self.actionButton.title = "Start pomodoro"
+        }
     }
 
 }
